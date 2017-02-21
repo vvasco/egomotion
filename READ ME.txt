@@ -1,0 +1,16 @@
+This is a repository that handles:
+- data preprocessing;
+- models' training;
+- testing;
+for egomotion learning.
+
+Encoders'positions are used to train 5 regressors:
+muvx, muvy, sigmavx, sigmavy, sigmavxvy
+
+The learnt models are used for testing.
+
+cornerDetection.m ---> outputs corner events: [ch t pol x y tbottle]
+tracker.m ---> outputs flow events: [ch t pol x y tbottle vx vy]
+extractStatsForTraining ---> outputs statistics for the training
+extractStatsForTesting ---> outputs statistics for testing
+computeMahal ---> outputs egomotion events: [ch t pol x y tbottle vx vy mahal_dist]
